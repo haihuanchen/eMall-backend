@@ -3,9 +3,11 @@ class ItemsController < ApplicationController
 
   # GET /items
   def index
-    @items = Item.all
+    
+    @items = Item.order(id: :asc)
 
-    render json: @items
+
+    render json: @items, except: :updated_at
   end
 
   # GET /items/1
