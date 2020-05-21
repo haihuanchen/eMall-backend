@@ -5,7 +5,8 @@ class OrdersController < ApplicationController
   def index
     @orders = Order.all
 
-    render json: @orders
+    render :json => @orders.to_json( :include => [:items])
+
   end
 
   # GET /orders/1
@@ -15,15 +16,13 @@ class OrdersController < ApplicationController
 
   # POST /orders
   def create
-    @order = Order.new(order_params)
-    10.times do 
-    @itemoder = ItemOder
-
-    if @order.save
-      render json: @order, status: :created, location: @order
-    else
-      render json: @order.errors, status: :unprocessable_entity
+    @order = Order.create(order_params)
+ 
+    params['cartItems'].each do |item|
+      ItemOrder.create(order_id: @order.id, item_id: item['id'])
     end
+      render :json => @order.to_json( :include => [:items])
+      # render json: @order, includes: :items,  status: :created, location: @order
   end
 
   # PATCH/PUT /orders/1
@@ -51,4 +50,5 @@ class OrdersController < ApplicationController
     def order_params
       params.require(:order).permit(:totalAmount, :shippingAddress, :user_id)
     end
+
 end

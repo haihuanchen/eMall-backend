@@ -4,7 +4,7 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.float :totalAmount
       t.string :shippingAddress
       t.integer :user_id
-
+      
       t.timestamps
     end
   end

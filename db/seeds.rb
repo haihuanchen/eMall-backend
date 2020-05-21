@@ -49,8 +49,9 @@ item8 = Item.create(title: 'PowerBilt Golf Clubs', description: 'EX-550 Hybrid I
 item9 = Item.create(title: 'Gucci Dionysus Convertible Tote', description: 'Matelasse Leather Large', price: 1299.99, quantity: 1, category: 'fashion', image: 'https://i.ebayimg.com/images/g/rdIAAOSw2tFeXmkw/s-l1600.jpg',condition: 'pre-owned',user_id: jenna.id)
 item10 = Item.create(title: 'Rolex Submariner Watch', description: 'Auto 40mm Steel Mens Oyster Bracelet Watch Date 16800', price: 7950.00, quantity: 1, category: 'fashion', image: 'https://i.ebayimg.com/images/g/aG8AAOSwY3Vecola/s-l1600.jpg',condition: 'pre-owned',user_id: User.all.sample.id)
 item11 = Item.create(title: 'Nike AIR MAX 97 Sneakers', description: 'Mens Shoes Black Anthracite Thunder Triple 921826-015 White NIB', price: 159.99, quantity: 1, category: 'fashion', image: 'https://i.ebayimg.com/images/g/wO4AAOSw1Aleq0af/s-l1600.jpg',condition: 'brand new',user_id: User.all.sample.id)
-item12 = Item.create(title: 'Apple Macbook Pro 15.4"', description: '16GB Ram 512GB SSD - Mgxc2ll/a - Mid-2014', price: 1049.99, quantity: 1, category: 'electronics', image: 'https://i.ebayimg.com/images/g/80IAAOSwBp1eqF-O/s-l1600.jpg',condition: 'pre-owned',user_id: User.all.sample.id)
-
+item12 = Item.create(title: 'Apple Macbook Pro 15.4 inch', description: '16GB Ram 512GB SSD - Mgxc2ll/a - Mid-2014', price: 1049.99, quantity: 1, category: 'electronics', image: 'https://i.ebayimg.com/images/g/80IAAOSwBp1eqF-O/s-l1600.jpg',condition: 'pre-owned',user_id: User.all.sample.id)
+item13 = Item.create(title: 'Gaming Wireless Headphones', description: 'SteelSeries Arctis 7 - Lossless Wireless Gaming Headset with DTS Headphone:X v2.', price: 129.99, quantity: 1, category: 'electronics', image: 'https://i.ebayimg.com/images/g/xokAAOSw-~tdwExM/s-l1600.jpg',condition: 'new',user_id: User.all.sample.id)
+ 
 50.times do 
     Review.create(
         title: Faker::Book.title,
