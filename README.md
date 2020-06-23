@@ -1,6 +1,11 @@
 # eMall-backend
 
-An online eCommerce website to make online shopping(buying & selling) more accessible. This project was bootstrapped with [Create React App].
+An online eCommerce website to make online shopping(buying & selling) more accessible. 
+
+
+Before you begin, ensure you have met the following requirements:
+
+You have to install the latest version of Ruby on Rails. <Linux/Mac> machine is supported. To start the back end app, simply run terminal command 'rails s'.
 
 -Developed user interface employing React and React Bootstrap for styling 
 
